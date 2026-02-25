@@ -1,0 +1,187 @@
+:root {
+  --bg: #dfe0e4;
+  --text: #2f333d;
+  --panel: #f6f7f8;
+  --shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
+  --radius: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, sans-serif;
+  line-height: 1.45;
+}
+
+.hero {
+  text-align: center;
+  padding: 3.5rem 1rem 2rem;
+}
+
+.logo,
+.pixel {
+  font-family: "Press Start 2P", monospace;
+  letter-spacing: 0.03em;
+}
+
+.logo {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+
+.hero-text {
+  margin: 1.2rem auto 0;
+  max-width: 850px;
+  font-size: clamp(1rem, 1.8vw, 1.35rem);
+}
+
+.sections {
+  width: min(1280px, 92vw);
+  margin: 0 auto 4rem;
+  display: grid;
+  gap: 3.5rem;
+}
+
+.feature {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: clamp(1rem, 4vw, 4rem);
+  align-items: center;
+}
+
+.feature.right {
+  grid-template-columns: 1fr 1fr;
+}
+
+.feature.right .copy {
+  order: 2;
+}
+
+.feature.right .visual {
+  order: 1;
+}
+
+.copy h2 {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 4.8vw, 4.4rem);
+  line-height: 1.05;
+  font-weight: 800;
+}
+
+.copy p {
+  margin: 0 0 1rem;
+  font-size: clamp(1.05rem, 1.8vw, 2rem);
+  max-width: 680px;
+}
+
+.copy a {
+  color: inherit;
+  font-size: clamp(1.15rem, 2vw, 2rem);
+}
+
+.visual {
+  background: #18191c;
+  border-radius: 24px;
+  padding: 10px;
+  box-shadow: var(--shadow);
+}
+
+.screen {
+  border-radius: 8px;
+  background: var(--panel);
+  min-height: 270px;
+  overflow: hidden;
+  border: 1px solid #cfd1d4;
+}
+
+.laptop {
+  width: min(100%, 760px);
+}
+
+.laptop .screen {
+  height: 340px;
+}
+
+.tablet {
+  border-radius: 36px;
+  padding: 16px;
+}
+
+.tablet .screen {
+  height: 380px;
+  border-radius: 18px;
+}
+
+.phone {
+  width: min(100%, 430px);
+  margin-inline: auto;
+  border-radius: 48px;
+  padding: 18px;
+}
+
+.phone .screen {
+  height: 560px;
+  border-radius: 30px;
+}
+
+.chat {
+  display: grid;
+  grid-template-columns: 34% 1fr;
+  gap: 10px;
+  padding: 12px;
+}
+
+.chat aside .row,
+.chat article .line {
+  height: 36px;
+  border-radius: 10px;
+  background: #e4e5e7;
+  margin-bottom: 10px;
+}
+
+.chat article .line {
+  height: 28px;
+}
+
+.map {
+  background:
+    linear-gradient(90deg, transparent 20%, #7bb576 20% 21%, transparent 21% 43%, #84b6f6 43% 44%, transparent 44%),
+    linear-gradient(transparent 28%, #84b6f6 28% 29%, transparent 29%),
+    #f2f3f5;
+}
+
+.table,
+.delivery,
+.players,
+.sale,
+.events {
+  background: repeating-linear-gradient(
+      to bottom,
+      #f7f8fa 0,
+      #f7f8fa 34px,
+      #ecedf0 34px,
+      #ecedf0 35px
+    ),
+    linear-gradient(#3f84ec 0 42px, transparent 42px);
+}
+
+@media (max-width: 1024px) {
+  .feature,
+  .feature.right {
+    grid-template-columns: 1fr;
+  }
+
+  .feature.right .copy,
+  .feature.right .visual {
+    order: initial;
+  }
+
+  .copy {
+    text-align: left;
+  }
+}
