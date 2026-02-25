@@ -3,123 +3,194 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MEOW — сервисы сервера</title>
+    <title>MEOW CITY — портал сервера</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="hero">
-      <h1 class="logo">MEOW</h1>
-      <p class="hero-text">
-        Подборка веб-инструментов сервера: чат, банки, доставка, карта городов,
-        торговые сервисы, ивенты и активность игроков.
-      </p>
+    <div class="background-glow" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="logo-block">
+        <p class="logo">MEOW CITY</p>
+        <p class="subtitle">единый портал сервисов сервера</p>
+      </div>
+      <nav class="top-nav" aria-label="Главное меню">
+        <button class="tab-btn active" data-tab="home">Главная</button>
+        <button class="tab-btn" data-tab="services">Сервисы</button>
+        <button class="tab-btn" data-tab="cabinet">Личный кабинет</button>
+        <button class="tab-btn" data-tab="events">Ивенты</button>
+        <button class="tab-btn" data-tab="support">Поддержка</button>
+      </nav>
     </header>
 
-    <main class="sections">
-      <section class="feature left">
-        <div class="copy">
-          <h2 class="pixel">May-Chat</h2>
-          <p>
-            Ламповый чатик, где вы можете написать любому игроку нашего сервера и
-            пообщаться.
-          </p>
-          <p>Ну короче флекс.</p>
-        </div>
-        <div class="visual laptop">
-          <div class="screen chat">
-            <aside>
-              <div class="row"></div><div class="row"></div><div class="row"></div><div class="row"></div>
-            </aside>
-            <article>
-              <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
-            </article>
+    <main class="page-wrap">
+      <section class="tab-panel active" id="home" role="tabpanel">
+        <article class="hero-card">
+          <div>
+            <p class="kicker">Добро пожаловать</p>
+            <h1>Полноценный веб-сайт сервера с вкладками и личным кабинетом</h1>
+            <p>
+              Управляй своими сервисами: чат, банк, доставка, торговля, профиль,
+              история активности и запись на ивенты — всё в одном месте.
+            </p>
+            <div class="hero-actions">
+              <button class="primary" data-open-tab="cabinet">Открыть ЛК</button>
+              <button class="ghost" data-open-tab="services">Все сервисы</button>
+            </div>
           </div>
+          <div class="status-grid">
+            <div class="status-card">
+              <span>Онлайн игроков</span>
+              <strong>1 284</strong>
+            </div>
+            <div class="status-card">
+              <span>Активных заказов</span>
+              <strong>356</strong>
+            </div>
+            <div class="status-card">
+              <span>Открытых тикетов</span>
+              <strong>42</strong>
+            </div>
+            <div class="status-card">
+              <span>Ближайший ивент</span>
+              <strong>Через 3ч</strong>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="tab-panel" id="services" role="tabpanel">
+        <article class="panel-header">
+          <h2>Сервисы сервера</h2>
+          <p>Выберите нужный инструмент и перейдите к работе в один клик.</p>
+        </article>
+        <div class="service-grid">
+          <article class="service-card">
+            <h3>May-Chat</h3>
+            <p>Личные сообщения, каналы городов и быстрые объявления.</p>
+            <button class="secondary">Открыть чат</button>
+          </article>
+          <article class="service-card">
+            <h3>Meow-Bank</h3>
+            <p>Счета, переводы, кредиты и история операций по персонажу.</p>
+            <button class="secondary">Открыть банк</button>
+          </article>
+          <article class="service-card">
+            <h3>Meow-Delivery</h3>
+            <p>Оформление доставок, трекинг курьера и рейтинг заказов.</p>
+            <button class="secondary">Заказать</button>
+          </article>
+          <article class="service-card">
+            <h3>MEOW-Sale</h3>
+            <p>Торговая площадка с фильтрами, отзывами и безопасной сделкой.</p>
+            <button class="secondary">Перейти в магазин</button>
+          </article>
+          <article class="service-card">
+            <h3>Карта хайперлупов</h3>
+            <p>Маршруты, станции, время в пути и города назначения.</p>
+            <button class="secondary">Открыть карту</button>
+          </article>
+          <article class="service-card">
+            <h3>Активность игроков</h3>
+            <p>Верифицированные профили, статус онлайн и достижения.</p>
+            <button class="secondary">Смотреть список</button>
+          </article>
         </div>
       </section>
 
-      <section class="feature right">
-        <div class="visual laptop">
-          <div class="screen map"></div>
-        </div>
-        <div class="copy">
-          <h2>КАРТА<br />ХАЙПЕРЛУПОВ</h2>
-          <p>Подробная карта государственных хайперлупов с информацией о городах.</p>
-          <a href="#">Смотреть...</a>
+      <section class="tab-panel" id="cabinet" role="tabpanel">
+        <article class="panel-header">
+          <h2>Личный кабинет</h2>
+          <p>Вход в профиль и управление персональными данными.</p>
+        </article>
+
+        <div class="cabinet-layout">
+          <form class="auth-card" id="auth-form">
+            <h3>Вход</h3>
+            <label>
+              Никнейм
+              <input type="text" name="nickname" placeholder="Например, CatBoss" required />
+            </label>
+            <label>
+              Пароль
+              <input type="password" name="password" placeholder="••••••••" required />
+            </label>
+            <button class="primary" type="submit">Войти в ЛК</button>
+            <p class="hint">Демо-режим: введи любые данные и нажми «Войти».</p>
+          </form>
+
+          <article class="profile-card" id="profile-card" aria-live="polite">
+            <h3>Профиль</h3>
+            <p class="muted">Вы не авторизованы.</p>
+            <ul>
+              <li>Город: —</li>
+              <li>Баланс: —</li>
+              <li>Ранг: —</li>
+            </ul>
+          </article>
+
+          <article class="orders-card">
+            <h3>Последние действия</h3>
+            <ul>
+              <li><span>Покупка в MEOW-Sale</span><strong>+2 предмета</strong></li>
+              <li><span>Перевод в Meow-Bank</span><strong>14 000$</strong></li>
+              <li><span>Новая доставка</span><strong>Статус: в пути</strong></li>
+              <li><span>Регистрация на ивент</span><strong>PvP Arena</strong></li>
+            </ul>
+          </article>
         </div>
       </section>
 
-      <section class="feature left">
-        <div class="visual laptop">
-          <div class="screen table"></div>
-        </div>
-        <div class="copy">
-          <h2>ИНСТРУМЕНТЫ<br />БАНКИРА</h2>
-          <p>Интерфейс для работы банка: кредиты, инвойсы, счета и переводы.</p>
-          <p>- Сейчас вас обслужит <strong>10 банкиров</strong></p>
-          <p>Ну короче флекс.</p>
-        </div>
-      </section>
-
-      <section class="feature right">
-        <div class="copy">
-          <h2 class="pixel">Meow-Delivery</h2>
-          <p>
-            Инновационный сервис по доставке товаров в любую точку. Можно заказать
-            доставку от стака золотой моркови до древнего стража.
-          </p>
-          <p>- На данный момент вас обслужит <strong>899 курьеров</strong></p>
-          <p>- Сервис насчитывает <strong>1070 выполненных заказов</strong></p>
-          <a href="#">Смотреть...</a>
-        </div>
-        <div class="visual tablet">
-          <div class="screen delivery"></div>
+      <section class="tab-panel" id="events" role="tabpanel">
+        <article class="panel-header">
+          <h2>Ближайшие ивенты</h2>
+          <p>Выбирайте активности и резервируйте участие заранее.</p>
+        </article>
+        <div class="event-list">
+          <article>
+            <p class="event-time">Сегодня · 20:00</p>
+            <h3>Гонка хайперлупов</h3>
+            <p>Командная гонка между городами с призовым фондом.</p>
+          </article>
+          <article>
+            <p class="event-time">Завтра · 18:30</p>
+            <h3>Ярмарка игроков</h3>
+            <p>Торговля редкими ресурсами и аукцион уникальных лотов.</p>
+          </article>
+          <article>
+            <p class="event-time">Пятница · 21:00</p>
+            <h3>PvP Arena Night</h3>
+            <p>Турнир 1v1 с сезонным рейтингом и боевыми наградами.</p>
+          </article>
         </div>
       </section>
 
-      <section class="feature left">
-        <div class="visual phone">
-          <div class="screen players"></div>
-        </div>
-        <div class="copy">
-          <h2>АКТИВНОСТЬ<br />ИГРОКОВ</h2>
-          <p>
-            Список верифицированных игроков сервера с профилями, городами и
-            статусом онлайн.
-          </p>
-          <a href="#">Смотреть...</a>
-        </div>
-      </section>
-
-      <section class="feature right">
-        <div class="visual laptop">
-          <div class="screen sale"></div>
-        </div>
-        <div class="copy">
-          <h2 class="pixel">MEOW-SALE</h2>
-          <p>
-            Сервис по продаже любых товаров. Вы можете купить и продать любой
-            интересующий товар.
-          </p>
-          <a href="#">Смотреть...</a>
-        </div>
-      </section>
-
-      <section class="feature left">
-        <div class="visual phone">
-          <div class="screen events"></div>
-        </div>
-        <div class="copy">
-          <h2>ИВЕНТЫ</h2>
-          <p>
-            Список запланированных мероприятий с точным временем и местом
-            проведения.
-          </p>
-          <a href="#">Смотреть...</a>
-        </div>
+      <section class="tab-panel" id="support" role="tabpanel">
+        <article class="panel-header">
+          <h2>Поддержка</h2>
+          <p>Если есть проблема, отправьте заявку — мы ответим быстро.</p>
+        </article>
+        <form class="support-form" id="support-form">
+          <label>
+            Тема обращения
+            <input type="text" name="topic" placeholder="Например, не пришла доставка" required />
+          </label>
+          <label>
+            Опишите проблему
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button class="primary" type="submit">Создать тикет</button>
+          <p class="hint" id="support-message"></p>
+        </form>
       </section>
     </main>
+
+    <script src="script.js"></script>
   </body>
 </html>
