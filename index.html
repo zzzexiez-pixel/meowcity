@@ -3,192 +3,223 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MEOW CITY — портал сервера</title>
+    <title>MEOW — приватный Minecraft 1.21.11</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&family=Rubik+Mono+One&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="background-glow" aria-hidden="true"></div>
+    <div class="bg-layer" aria-hidden="true"></div>
 
-    <header class="site-header">
-      <div class="logo-block">
-        <p class="logo">MEOW CITY</p>
-        <p class="subtitle">единый портал сервисов сервера</p>
+    <header class="header">
+      <div class="brand-block">
+        <p class="logo">MEOW</p>
+        <p class="sub">приватный сервер Minecraft 1.21.11 · premium web portal</p>
       </div>
-      <nav class="top-nav" aria-label="Главное меню">
-        <button class="tab-btn active" data-tab="home">Главная</button>
-        <button class="tab-btn" data-tab="services">Сервисы</button>
-        <button class="tab-btn" data-tab="cabinet">Личный кабинет</button>
-        <button class="tab-btn" data-tab="events">Ивенты</button>
-        <button class="tab-btn" data-tab="support">Поддержка</button>
-      </nav>
+
+      <div class="header-right">
+        <div class="status-pill"><span class="dot"></span>Онлайн: <strong>318 / 400</strong></div>
+        <div class="auth-actions">
+          <button class="btn ghost" data-open-tab="cabinet">Регистрация</button>
+          <button class="btn primary" data-open-tab="cabinet">Войти</button>
+        </div>
+      </div>
     </header>
 
-    <main class="page-wrap">
-      <section class="tab-panel active" id="home" role="tabpanel">
-        <article class="hero-card">
-          <div>
-            <p class="kicker">Добро пожаловать</p>
-            <h1>Полноценный веб-сайт сервера с вкладками и личным кабинетом</h1>
-            <p>
-              Управляй своими сервисами: чат, банк, доставка, торговля, профиль,
-              история активности и запись на ивенты — всё в одном месте.
-            </p>
-            <div class="hero-actions">
-              <button class="primary" data-open-tab="cabinet">Открыть ЛК</button>
-              <button class="ghost" data-open-tab="services">Все сервисы</button>
-            </div>
-          </div>
-          <div class="status-grid">
-            <div class="status-card">
-              <span>Онлайн игроков</span>
-              <strong>1 284</strong>
-            </div>
-            <div class="status-card">
-              <span>Активных заказов</span>
-              <strong>356</strong>
-            </div>
-            <div class="status-card">
-              <span>Открытых тикетов</span>
-              <strong>42</strong>
-            </div>
-            <div class="status-card">
-              <span>Ближайший ивент</span>
-              <strong>Через 3ч</strong>
-            </div>
-          </div>
-        </article>
-      </section>
+    <main class="layout">
+      <section class="content">
+        <nav class="top-tabs" aria-label="Главные вкладки">
+          <button class="tab active" data-tab="overview">Обзор</button>
+          <button class="tab" data-tab="cabinet">ЛК</button>
+          <button class="tab" data-tab="auction">Аукцион</button>
+          <button class="tab" data-tab="bank">Переводы</button>
+          <button class="tab" data-tab="bans">Нарушения</button>
+          <button class="tab" data-tab="shop">Магазин</button>
+          <button class="tab" data-tab="rent">Аренда AR</button>
+          <button class="tab" data-tab="chat">Чат</button>
+          <button class="tab" data-tab="roles">Должности</button>
+          <button class="tab" data-tab="admin">Админ</button>
+        </nav>
 
-      <section class="tab-panel" id="services" role="tabpanel">
-        <article class="panel-header">
-          <h2>Сервисы сервера</h2>
-          <p>Выберите нужный инструмент и перейдите к работе в один клик.</p>
-        </article>
-        <div class="service-grid">
-          <article class="service-card">
-            <h3>May-Chat</h3>
-            <p>Личные сообщения, каналы городов и быстрые объявления.</p>
-            <button class="secondary">Открыть чат</button>
+        <section class="panel active" id="overview">
+          <article class="hero card">
+            <div>
+              <p class="badge">СУПЕР-ФУНКЦИОНАЛЬНЫЙ ПОРТАЛ</p>
+              <h1>MEOW — красивый и масштабный сайт приватного сервера</h1>
+              <p>
+                Всё в одном месте: личный кабинет, аукцион Minecraft-товаров, карточка и переводы,
+                история банов, магазин, аренда помещений (АР — Алмазная Руда), чат, должности и
+                админ-панель управления.
+              </p>
+              <div class="hero-actions">
+                <button class="btn primary" data-open-tab="cabinet">Открыть личный кабинет</button>
+                <button class="btn ghost" data-open-tab="auction">Перейти на аукцион</button>
+              </div>
+            </div>
+            <div class="kpi-grid">
+              <article><span>Сделок сегодня</span><strong>2 904</strong></article>
+              <article><span>Лотов на аукционе</span><strong>11 227</strong></article>
+              <article><span>АР в аренде</span><strong>6 450</strong></article>
+              <article><span>Новых игроков</span><strong>153</strong></article>
+            </div>
           </article>
-          <article class="service-card">
-            <h3>Meow-Bank</h3>
-            <p>Счета, переводы, кредиты и история операций по персонажу.</p>
-            <button class="secondary">Открыть банк</button>
-          </article>
-          <article class="service-card">
-            <h3>Meow-Delivery</h3>
-            <p>Оформление доставок, трекинг курьера и рейтинг заказов.</p>
-            <button class="secondary">Заказать</button>
-          </article>
-          <article class="service-card">
-            <h3>MEOW-Sale</h3>
-            <p>Торговая площадка с фильтрами, отзывами и безопасной сделкой.</p>
-            <button class="secondary">Перейти в магазин</button>
-          </article>
-          <article class="service-card">
-            <h3>Карта хайперлупов</h3>
-            <p>Маршруты, станции, время в пути и города назначения.</p>
-            <button class="secondary">Открыть карту</button>
-          </article>
-          <article class="service-card">
-            <h3>Активность игроков</h3>
-            <p>Верифицированные профили, статус онлайн и достижения.</p>
-            <button class="secondary">Смотреть список</button>
-          </article>
-        </div>
-      </section>
+        </section>
 
-      <section class="tab-panel" id="cabinet" role="tabpanel">
-        <article class="panel-header">
+        <section class="panel" id="cabinet">
           <h2>Личный кабинет</h2>
-          <p>Вход в профиль и управление персональными данными.</p>
-        </article>
+          <div class="grid-3">
+            <form class="card" id="login-form">
+              <h3>Вход / регистрация</h3>
+              <label>Ник
+                <input name="nick" required placeholder="MeowPlayer" />
+              </label>
+              <label>Пароль
+                <input name="pass" type="password" required placeholder="••••••••" />
+              </label>
+              <button class="btn primary" type="submit">Войти в аккаунт</button>
+            </form>
+            <article class="card" id="profile-card">
+              <h3>Профиль</h3>
+              <p class="muted">Авторизуйся, чтобы загрузить персональные данные.</p>
+            </article>
+            <article class="card">
+              <h3>Функции ЛК</h3>
+              <ul>
+                <li>Смена скина, плаща, префикса</li>
+                <li>Связка Telegram / Discord</li>
+                <li>2FA и история сессий</li>
+                <li>История покупок и переводов</li>
+              </ul>
+            </article>
+          </div>
+        </section>
 
-        <div class="cabinet-layout">
-          <form class="auth-card" id="auth-form">
-            <h3>Вход</h3>
-            <label>
-              Никнейм
-              <input type="text" name="nickname" placeholder="Например, CatBoss" required />
+        <section class="panel" id="auction">
+          <h2>Аукцион Minecraft-товаров</h2>
+          <div class="toolbar card">
+            <label>Поиск
+              <input id="auction-search" placeholder="Например, Elytra" />
             </label>
-            <label>
-              Пароль
-              <input type="password" name="password" placeholder="••••••••" required />
+            <label>Сортировка
+              <select id="auction-sort">
+                <option value="price-asc">Цена ↑</option>
+                <option value="price-desc">Цена ↓</option>
+                <option value="name">Название</option>
+              </select>
             </label>
-            <button class="primary" type="submit">Войти в ЛК</button>
-            <p class="hint">Демо-режим: введи любые данные и нажми «Войти».</p>
-          </form>
+          </div>
+          <div class="items" id="auction-list"></div>
+        </section>
 
-          <article class="profile-card" id="profile-card" aria-live="polite">
-            <h3>Профиль</h3>
-            <p class="muted">Вы не авторизованы.</p>
-            <ul>
-              <li>Город: —</li>
-              <li>Баланс: —</li>
-              <li>Ранг: —</li>
-            </ul>
+        <section class="panel" id="bank">
+          <h2>Карточка и переводы между игроками</h2>
+          <div class="grid-2">
+            <article class="card">
+              <h3>Игровая карта MEOW BANK</h3>
+              <div class="bank-card">
+                <p>MEOW BANK</p>
+                <strong id="card-owner">Игрок не авторизован</strong>
+                <span>Баланс: <b id="card-balance">0 AR-Coin</b></span>
+              </div>
+            </article>
+            <form class="card" id="transfer-form">
+              <h3>Сделать перевод</h3>
+              <label>Кому
+                <input name="to" required placeholder="FoxMiner" />
+              </label>
+              <label>Сумма (AR-Coin)
+                <input name="amount" required type="number" min="1" />
+              </label>
+              <button class="btn primary" type="submit">Отправить</button>
+              <p class="hint" id="transfer-hint"></p>
+            </form>
+          </div>
+          <article class="card">
+            <h3>История переводов</h3>
+            <ul id="transfer-history"></ul>
           </article>
+        </section>
 
-          <article class="orders-card">
-            <h3>Последние действия</h3>
-            <ul>
-              <li><span>Покупка в MEOW-Sale</span><strong>+2 предмета</strong></li>
-              <li><span>Перевод в Meow-Bank</span><strong>14 000$</strong></li>
-              <li><span>Новая доставка</span><strong>Статус: в пути</strong></li>
-              <li><span>Регистрация на ивент</span><strong>PvP Arena</strong></li>
-            </ul>
+        <section class="panel" id="bans">
+          <h2>История банов и нарушений</h2>
+          <article class="card">
+            <table>
+              <thead>
+                <tr><th>Игрок</th><th>Причина</th><th>Модератор</th><th>Срок</th><th>Статус</th></tr>
+              </thead>
+              <tbody id="ban-table"></tbody>
+            </table>
           </article>
-        </div>
+        </section>
+
+        <section class="panel" id="shop">
+          <h2>Магазин товаров</h2>
+          <div class="items" id="shop-list"></div>
+        </section>
+
+        <section class="panel" id="rent">
+          <h2>Аренда помещений (АР — Алмазная Руда)</h2>
+          <div class="grid-3" id="rent-list"></div>
+        </section>
+
+        <section class="panel" id="chat">
+          <h2>Чат игроков</h2>
+          <article class="card chat-card">
+            <div class="chat-log" id="chat-log"></div>
+            <form class="chat-form" id="chat-form">
+              <input name="message" placeholder="Написать в глобальный чат..." required />
+              <button class="btn primary">Отправить</button>
+            </form>
+          </article>
+        </section>
+
+        <section class="panel" id="roles">
+          <h2>Должности сервера</h2>
+          <div class="grid-3" id="roles-list"></div>
+        </section>
+
+        <section class="panel" id="admin">
+          <h2>Админ-панель</h2>
+          <div class="grid-2">
+            <form class="card" id="ban-form">
+              <h3>Выдать наказание</h3>
+              <label>Игрок
+                <input name="player" required placeholder="NightCheater" />
+              </label>
+              <label>Причина
+                <input name="reason" required placeholder="X-Ray" />
+              </label>
+              <label>Срок
+                <input name="term" required placeholder="7 дней" />
+              </label>
+              <button class="btn primary" type="submit">Добавить</button>
+              <p class="hint" id="admin-hint"></p>
+            </form>
+            <article class="card">
+              <h3>Админ-инструменты</h3>
+              <ul>
+                <li>Контроль чата, мут/кик/бан</li>
+                <li>Логи активности игроков</li>
+                <li>Управление должностями</li>
+                <li>Настройка экономики и ивентов</li>
+              </ul>
+            </article>
+          </div>
+        </section>
       </section>
 
-      <section class="tab-panel" id="events" role="tabpanel">
-        <article class="panel-header">
-          <h2>Ближайшие ивенты</h2>
-          <p>Выбирайте активности и резервируйте участие заранее.</p>
+      <aside class="right-control card">
+        <h3>Управление вкладками</h3>
+        <p class="muted">Быстрая панель справа для переключения всех разделов портала.</p>
+        <div class="right-tabs" id="right-tabs"></div>
+        <article class="mini card-lite">
+          <h4>Пульс сервера</h4>
+          <p>TPS: <strong>20.0</strong></p>
+          <p>Пинг: <strong>19ms</strong></p>
+          <p>Активных чатов: <strong>37</strong></p>
         </article>
-        <div class="event-list">
-          <article>
-            <p class="event-time">Сегодня · 20:00</p>
-            <h3>Гонка хайперлупов</h3>
-            <p>Командная гонка между городами с призовым фондом.</p>
-          </article>
-          <article>
-            <p class="event-time">Завтра · 18:30</p>
-            <h3>Ярмарка игроков</h3>
-            <p>Торговля редкими ресурсами и аукцион уникальных лотов.</p>
-          </article>
-          <article>
-            <p class="event-time">Пятница · 21:00</p>
-            <h3>PvP Arena Night</h3>
-            <p>Турнир 1v1 с сезонным рейтингом и боевыми наградами.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="tab-panel" id="support" role="tabpanel">
-        <article class="panel-header">
-          <h2>Поддержка</h2>
-          <p>Если есть проблема, отправьте заявку — мы ответим быстро.</p>
-        </article>
-        <form class="support-form" id="support-form">
-          <label>
-            Тема обращения
-            <input type="text" name="topic" placeholder="Например, не пришла доставка" required />
-          </label>
-          <label>
-            Опишите проблему
-            <textarea name="message" rows="5" required></textarea>
-          </label>
-          <button class="primary" type="submit">Создать тикет</button>
-          <p class="hint" id="support-message"></p>
-        </form>
-      </section>
+      </aside>
     </main>
 
     <script src="script.js"></script>
